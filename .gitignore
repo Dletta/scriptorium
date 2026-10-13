@@ -2,6 +2,7 @@
 node_modules
 *.blend
 *.blend1
+*.lock
 
 # TLS certificates (do not commit private keys)
 certs/

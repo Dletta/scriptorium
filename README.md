@@ -31,6 +31,6 @@ Override the port with `PORT` if needed:
 PORT=8443 bun run start
 ```
 
-Static files are served from `src/`.
+Static files are served from the project root (for GitHub Pages).
 
 This project was created using `bun init` in bun v1.3.12. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
