@@ -1,0 +1,209 @@
+body {
+  font-family: sans-serif;
+  background: #1e1e1e;
+  color: #fff;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: auto auto 1fr;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  gap: 2px;
+}
+
+.title-bar {
+  font-size: 25px;
+  font-weight: bold;
+  color: #bc7f7f;
+  padding: 5px;
+  border-bottom: 2px solid #908f8f;
+}
+
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  border-bottom: 1px solid #555;
+}
+
+.header-menu button {
+  font: inherit;
+  color: #fff;
+  background: #3a3a3a;
+  border: 1px solid #555;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  width: auto;
+  min-width: 5em;
+  box-sizing: border-box;
+}
+
+.header-menu #view-mode {
+  width: 14.5em;
+}
+
+#docs-dialog {
+  background: #2a2a2a;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 6px;
+  padding: 1em;
+  min-width: 280px;
+}
+
+#docs-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+#docs-dialog p {
+  margin: 0 0 0.75em;
+}
+
+#docs-dialog select {
+  display: block;
+  width: 100%;
+  min-height: 10em;
+  background: #1e1e1e;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#docs-dialog menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0.75em 0 0;
+  padding: 0;
+}
+
+#docs-dialog menu button {
+  font: inherit;
+  color: #fff;
+  background: #3a3a3a;
+  border: 1px solid #555;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.editor-container {
+  position: relative;
+  min-height: 0;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.input-editor,
+.editor-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.input-editor {
+  background: transparent;
+  color: transparent;
+  caret-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  outline: none;
+  resize: none;
+  font: inherit;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.input-editor::selection {
+  background: transparent;
+  color: transparent;
+}
+
+.input-editor::-moz-selection {
+  background: transparent;
+  color: transparent;
+}
+
+.editor-overlay {
+  background-color: #2a2a2a;
+  pointer-events: none;
+  white-space: pre-wrap;
+  overflow: auto;
+  margin: 5px 0px 5px 5px;
+  padding: 5px;
+  border: 1px solid #c0c0c0;
+  border-radius: 7px;
+  box-sizing: border-box;
+}
+
+.editor-overlay h1,
+.editor-overlay h2,
+.editor-overlay h3 {
+  margin: 0;
+}
+
+.editor-overlay ul,
+.editor-overlay ol {
+  margin: 0;
+  padding-left: 1.5em;
+}
+
+.editor-overlay a {
+  color: #8ec7ff;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.editor-overlay img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.editor-overlay blockquote {
+  margin: 0;
+  padding: 0.25em 0.5em;
+  background: #4a4a4a;
+}
+
+.editor-overlay pre.code-block {
+  margin: 0;
+  padding: 0.5em;
+  background: #4a4a4a;
+  border: 1px solid #666;
+  font-family: serif;
+  white-space: pre-wrap;
+  box-sizing: border-box;
+}
+
+.editor-overlay pre.code-block code {
+  font-family: inherit;
+}
+
+.selection {
+  background: #316ac5;
+  color: inherit;
+}
+
+.caret {
+  display: inline-block;
+  width: 1px;
+  height: 1em;
+  background: #fff;
+  vertical-align: text-bottom;
+  animation: caret-blink 1s step-end infinite;
+}
+
+@keyframes caret-blink {
+  50% {
+    opacity: 0;
+  }
+}

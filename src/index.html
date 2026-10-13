@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Scriptorium</title>
+    <link rel="stylesheet" href="/index.css" />
+    <link rel="manifest" href="/manifest.json" />
+  </head>
+  <body>
+    <div class="title-bar">Scriptorium</div>
+    <div class="header-menu">
+      <button type="button" id="view-mode">Switch to Raw Text</button>
+      <button type="button" id="save-doc">Save</button>
+      <button type="button" id="load-doc">Load</button>
+      <button type="button" id="rename-doc">Rename</button>
+      <button type="button" id="delete-doc">Delete</button>
+      <button type="button" id="download-doc">Download</button>
+      <button type="button" id="export-doc">Export</button>
+    </div>
+    <div class="editor-container">
+      <textarea id="content" class="input-editor"></textarea>
+      <div id="overlay" class="editor-overlay"></div>
+    </div>
+    <dialog id="docs-dialog">
+      <form method="dialog" id="docs-form">
+        <p id="docs-dialog-title">Documents</p>
+        <select id="docs-select" size="8"></select>
+        <menu>
+          <button value="cancel" type="submit">Cancel</button>
+          <button value="confirm" type="submit" id="docs-confirm">OK</button>
+          <button type="button" id="export-all" hidden>Export all</button>
+        </menu>
+      </form>
+    </dialog>
+  </body>
+  <script src="/index.js"></script>
+</html>

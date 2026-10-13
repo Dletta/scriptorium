@@ -1,0 +1,12 @@
+{
+  "name": "scriptorium",
+  "module": "index.js",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "bun run index.js"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
