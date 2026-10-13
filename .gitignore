@@ -1,5 +1,7 @@
 # dependencies (bun install)
 node_modules
+*.blend
+*.blend1
 
 # TLS certificates (do not commit private keys)
 certs/
